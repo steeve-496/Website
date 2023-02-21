@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>YVIDH 2023</title>
+
+<link rel="stylesheet" href="web.css">
+
+</head>
+<body>
+	<div id="bgearth" class="earth-js"></div>
+
+	<div id="wrapper">
+		
+		<header>
+			<!-- <h1 style="padding-top: 0;"><img src="images/miniature-earth.svg" alt="YVIDH 2023"></h1> -->
+			<h1 style="padding-top: 0.5em; text-transform: none;">YVIDH 2023</h1>
+			
+		</header>
+		
+
+	
+<script>
+
+window.addEventListener( 'load', function() {
+	var script = document.createElement( "script" );
+	script.src = "miniature.earth.js";
+	document.body.appendChild( script );	
+} );
+
+
+window.addEventListener( "earthjsload", function() {
+
+	new Earth( "bgearth", {
+		location: { lat: 20, lng: -250 },
+		light: 'none',
+		autoRotate: true,
+		autoRotateDelay: 0,
+		autoRotateStart: 1000,
+		mapLandColor: '#0d130e',
+		mapSeaColor: 'RGBA(13,19,14,0.25)',
+		mapBorderColor: '#AAA',
+		mapBorderWidth: 0.25,
+		transparent: true,
+		zoom: 1.2,
+		quality: 4,
+		draggable: false
+	} );	
+	
+} );
+
+</script>
+	
+</body>
+</html>
